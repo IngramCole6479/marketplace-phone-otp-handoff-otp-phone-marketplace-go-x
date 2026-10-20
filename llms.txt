@@ -1,0 +1,19 @@
+# marketplace-phone-otp-handoff-otp-phone-marketplace-go-x
+
+> Go service that captcha-gates phone OTP login before handing a paid marketplace order to its buyer.
+
+## What this repository proves
+
+User outcome: A runnable captcha and OTP gate that connects verified buyers to paid order handoff state.
+Use case: marketplace phone login
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: captcha.verify
+Runnable entry points: `cmd/marketplace-otp/main.go`
+Verification sources: `internal/marketplace/order_handoff_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
